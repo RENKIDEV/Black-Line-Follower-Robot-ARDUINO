@@ -1,3 +1,4 @@
+//Wincker Matthias Frebillot-Fergut Andrea
 #include "CarMotors.h" // Bibliothèque pour contrôler les moteurs du robot
 #include "FastLED.h"   // Bibliothèque pour gérer les LEDs RGB
 
@@ -121,18 +122,4 @@ void loop() {
   }
 
   delay(10);
-}
-
-void updateLEDColor(int step) {
-  // Tableau de couleurs leds
-  static const CRGB colors[] = {
-    CRGB(255, 0, 0),   // Rouge
-    CRGB(0, 255, 0),   // Vert
-    CRGB(0, 0, 255),   // Bleu
-    CRGB(255, 125, 0), // Orange
-    CRGB(255, 0, 255)  // Violet
-  };
-  // Mise à jour de la LED avec la couleur appropriée
-  leds[0] = colors[step % 5]; // 
-  FastLED.show(); // Appliquer la couleur
 }
